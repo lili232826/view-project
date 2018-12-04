@@ -1,0 +1,411 @@
+/*----------------------------------- Reset --------------------------------------*/
+header,footer,section,article,aside,nav,hgroup,address,figure,figcaption,menu,details{display:block; }
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font: inherit;
+}
+html,body{
+    /*min-width: 1200px;*/
+    /* height: 100%; */
+    font-family: 微软雅黑,Microsoft Yahei,Hiragino Sans GB,tahoma,arial;
+   /*  -webkit-tap-highlight-color:rgba(255,0,0,0);
+   overflow-x: hidden;
+   -ms-word-break: break-all;
+   word-break: break-all; */
+}
+html{
+  font-size: 62.5%;
+}
+body{
+  font-size: 16px;
+  font-size: 1.6rem;
+}
+a{
+    text-decoration: none;
+}
+a:hover{color:#d73530; text-decoration: none;}
+
+img{
+    border:none;
+    margin:0;
+    padding:0;
+}
+input ,select, button,textarea{
+    line-height: normal;
+    outline: none;
+    font-family: 微软雅黑,Microsoft Yahei,Hiragino Sans GB,tahoma,arial;
+}
+textarea{
+    resize: none;
+}
+ul{
+    list-style-image: none;
+    list-style: none;
+}
+input[type=number] {
+    -webkit-appearance: textfield;
+    -moz-appearance: textfield;
+    appearance: textfield;
+}
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    margin: 0;
+}
+input:-webkit-autofill,
+textarea:-webkit-autofill,
+select:-webkit-autofill {
+    background-color: rgb(255, 255, 255) !important;
+    -webkit-box-shadow: 0 0 0 1000px white inset;
+    -moz-box-shadow: 0 0 0 1000px white inset;
+    box-shadow: 0 0 0 1000px white inset;
+}
+input[type=text]:focus, input[type=password]:focus, textarea:focus {
+    -webkit-box-shadow: 0 0 0 1000px white inset;
+    -moz-box-shadow: 0 0 0 1000px white inset;
+    box-shadow: 0 0 0 1000px white inset;
+}
+.pad-t100{
+    padding-top:100px;
+}
+.pad-b100{
+    padding-bottom:100px;
+}
+.mag-t45{
+    margin-top: 45px;
+}
+.mag-t40{
+    margin-top: 40px;
+}
+.mag-t20{
+    margin-top: 20px !important;
+}
+.mag-b22{
+  margin-bottom: 22px !important;
+}
+.mag-b10{
+  margin-bottom: 10px !important;
+}
+/*清楚浮动*/
+.clearfix:after{  
+            content: '';
+            display: block;
+            clear: both;
+        }
+.float-r{
+    float: right;
+}
+.float-l{
+    float: left;
+}
+.txt-left{
+    text-align: left !important;
+}
+.txt-right{
+    text-align: right !important;
+}
+/* 弹性盒默认 */
+.flex{
+    display: -webkit-flex;
+    display: flex; 
+    display: box;
+}
+.flex-wrap{
+    display: -webkit-flex;
+    display: flex; 
+    display: box;
+
+}
+/* 弹性盒水平垂直居中 */
+.flex-center{
+    display:-webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: flex;
+    -webkit-justify-content:center;
+    justify-content:center;
+    -ms-justify-content:center;
+    -moz-justify-content:center;
+    -webkit-align-items:center;
+    -moz-align-items:center;
+   -ms-align-items:center;
+    align-items:center;
+}
+.flex-between{
+     display:-webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: flex;
+    -webkit-justify-content:space-between;
+    justify-content:space-between;
+    -ms-justify-content:space-between;
+    -moz-justify-content:space-between;
+    justify-content: space-between;
+    -webkit-align-items:center;
+    -moz-align-items:center;
+   -ms-align-items:center;
+    align-items:center;
+}
+.flex-between-2{
+     display:-webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: flex;
+    -webkit-justify-content:space-between;
+    justify-content:space-between;
+    -ms-justify-content:space-between;
+    -moz-justify-content:space-between;
+    justify-content: space-between;
+}
+.flex-around{
+     display:-webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: flex;
+    -webkit-justify-content:space-around;
+    justify-content:space-around;
+    -ms-justify-content:space-around;
+    -moz-justify-content:space-around;
+    justify-content:space-around;
+    -webkit-align-items:center;
+    -moz-align-items:center;
+   -ms-align-items:center;
+    align-items:center;
+     flex-wrap: wrap;
+}
+.flex-between-wrap{
+     display:-webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: flex;
+    -webkit-justify-content:space-between;
+    justify-content:space-between;
+    -ms-justify-content:space-between;
+    -moz-justify-content:space-between;
+    justify-content: space-between;
+    -webkit-align-items:center;
+    -moz-align-items:center;
+   -ms-align-items:center;
+    align-items:center;
+    flex-wrap: wrap;
+}
+.flex-start{
+    display:-webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: flex;
+    -webkit-justify-content:flex-start;
+    justify-content:flex-start;
+    -ms-justify-content:flex-start;
+    -moz-justify-content:flex-start;
+     -webkit-align-items:center;
+    -moz-align-items:center;
+   -ms-align-items:center;
+    align-items:center;
+}
+.flex-v{
+    display:-webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: flex;
+     -webkit-align-items:center;
+    -moz-align-items:center;
+   -ms-align-items:center;
+    align-items:center;
+}
+.flex-center-end{
+    display:-webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: flex;
+    -webkit-justify-content:flex-end;
+    justify-content:flex-end;
+    -ms-justify-content:flex-end;
+    -moz-justify-content:flex-end;
+    -webkit-align-items:center;
+    -moz-align-items:center;
+   -ms-align-items:center;
+    align-items:center;
+}
+
+/* 多行文本省略 */
+.txt-ellipsis-6{
+    display: -webkit-box;
+    display: flex;
+    -webkit-line-clamp:6;
+    -webkit-box-orient:vertical;
+    overflow: hidden;
+
+}
+.txt-ellipsis-8{
+    display: -webkit-box;
+    display: flex;
+    -webkit-line-clamp:8;
+    -webkit-box-orient:vertical;
+    overflow: hidden;
+}
+.txt-ellipsis-3{
+    display: -webkit-box;
+    display: flex;
+    -webkit-line-clamp:3;
+    -webkit-box-orient:vertical;
+    overflow: hidden;
+}
+.hide{
+  display: none;
+}
+.show{
+  display: block;
+}
+/* 动画 */
+.animated {
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+.animated.infinite {
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+}
+@keyframes zoomIn {
+  from {
+    opacity: 0;
+    -webkit-transform: scale3d(0.3, 0.3, 0.3);
+    transform: scale3d(0.3, 0.3, 0.3);
+  }
+
+  50% {
+    opacity: 1;
+  }
+}
+.zoomIn {
+  -webkit-animation-name: zoomIn;
+  animation-name: zoomIn;
+}
+@keyframes myzoom {
+  from {
+    -webkit-transform: scale3d(1, 1,1);
+    transform: scale3d(1, 1, 1);
+  }
+  50% {
+    -webkit-transform: scale3d(1.5, 1.5,1.5);
+    transform: scale3d(1.5, 1.5, 1.5);
+  }
+}
+.myzoom {
+  -webkit-animation-name: myzoom;
+  animation-name:myzoom;
+}
+
+@keyframes bounceIn {
+  from,
+  20%,
+  40%,
+  60%,
+  80%,
+  to {
+    -webkit-animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+    animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+  }
+
+  0% {
+    opacity: 0;
+    -webkit-transform: scale3d(0.3, 0.3, 0.3);
+    transform: scale3d(0.3, 0.3, 0.3);
+  }
+
+  20% {
+    -webkit-transform: scale3d(1.1, 1.1, 1.1);
+    transform: scale3d(1.1, 1.1, 1.1);
+  }
+
+  40% {
+    -webkit-transform: scale3d(0.9, 0.9, 0.9);
+    transform: scale3d(0.9, 0.9, 0.9);
+  }
+
+  60% {
+    opacity: 1;
+    -webkit-transform: scale3d(1.03, 1.03, 1.03);
+    transform: scale3d(1.03, 1.03, 1.03);
+  }
+
+  80% {
+    -webkit-transform: scale3d(0.97, 0.97, 0.97);
+    transform: scale3d(0.97, 0.97, 0.97);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+  }
+}
+@keyframes tada {
+  from {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+  }
+  10%,
+  20% {
+    -webkit-transform: scale3d(0.9, 0.9, 0.9) rotate3d(0, 0, 1, -3deg);
+    transform: scale3d(0.9, 0.9, 0.9) rotate3d(0, 0, 1, -3deg);
+  }
+
+  30%,
+  50%,
+  70%,
+  90% {
+    -webkit-transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, 3deg);
+    transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, 3deg);
+  }
+
+  40%,
+  60%,
+  80% {
+    -webkit-transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, -3deg);
+    transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, -3deg);
+  }
+
+  to {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+  }
+}
+.font-write{
+  color: #fff !important;
+}
+/* 红色切换 */
+.red-line{
+   background: #e92229;
+   height: 50px;
+}
+.mag-bottom-68{
+    margin-bottom: 68px;
+}
+.num-special{
+    font-family: Bahnschrift !important;
+}
+.show{
+    display: block;
+}
+
+
+

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>项目详情页</title>
+		<link rel="stylesheet" href="../plugin/layui/css/layui.css">
+		<link rel="stylesheet" href="../css/reset.css">
+		<link rel="stylesheet" href="../css/wyView.css">
+		<link rel="stylesheet" href="../css/wy_layer.css">
+	</head>
+	<body>
+		<div class="wrap-outer" style="">
+			<div class="content">
+				<dl class="flex-center item-list">
+					<dt class="item-pic">
+						<img src="../img/home_pic1.png" alt="">
+					</dt>
+					<dd class="tip">
+						<div class="flex-v">
+							<div>金泰大厦</div><span>写字楼</span><div id="rate"></div>
+						</div>
+						<div>北京市，朝阳区，西坝河南路1号</div>
+						<div class="txt-ellipsis-3">北京市，朝阳区，西坝河北京市，朝阳区，西坝河北京市，朝阳区，西坝河南路1号</div>
+					</dd>
+				</dl>
+				<div class="describe-text flex-between">
+					<div>
+						<p>服务面积</p>
+						<p>45000㎡</p>
+					</div>
+					<div>
+						<p>总户数</p>
+						<p>120户</p>
+					</div>
+					<div>
+						<p>员工</p>
+						<p>41人</p>
+					</div>
+					<div>
+						<p>设备设施</p>
+						<p>980个</p>
+					</div>
+					<div>
+						<p>维修/损坏</p>
+						<p>9个</p>
+					</div>
+				</div>
+				<div class="item-chart flex-center">
+					<div id="">
+						<div class="kuang_bg" style="height:100%">
+							<div class="wy-title"><span>收入情况</span></div>
+							<div class="chart-wrap" id="item-income"> 	
+							</div>
+						</div>
+					</div>
+					<div id="item-energy">
+						<div class="kuang_bg"  style="height:100%">
+							<div class="wy-title"><span>本月能耗情况</span></div>
+							<div class="chart-wrap" id="energy" style="height: 180px;"></div>
+						</div>
+					</div>
+					<div id="">
+						<div class="kuang_bg" style=";height:100%">
+							<div class="wy-title"><span>本月工单</span></div>
+							<div class="chart-wrap" id="item-workOrder" style="height: 100%;"> 
+								
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+	<script src="../js/jquery-2.1.1.min.js"></script>
+	<script src="../js/echarts.min.js"></script>
+	<script src="../plugin/layui/layui.all.js"></script>
+	<script src='../js/item-index6.js'></script><!-- 收入分布 -->
+	<script src='../js/index8.js'></script><!-- 本月能耗 -->
+	<script src='../js/item-index4.js'></script><!-- 本月工单 -->
+	<script>
+		$(document).ready(function(){
+			layui.use('rate', function(){
+				var rate=layui.rate;
+				//只读
+				  rate.render({
+					elem: '#rate'
+					,value: 4
+					,readonly: true
+				  });
+			});       
+		})
+	</script>
+</html>

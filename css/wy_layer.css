@@ -1,0 +1,71 @@
+/* body .demo-class .layui-layer-title{background:#c00; color:#fff; border: none;}
+body .demo-class .layui-layer-btn{border-top:1px solid #E9E7E7}
+body .demo-class .layui-layer-btn a{background:#333;}
+body .demo-class .layui-layer-btn .layui-layer-btn1{background:#999;} */
+/* body .view-class{
+	background-color: #051048;
+} */
+html,body{
+	width: 100%;
+	height:100%;
+	background-color: #051048;
+}
+.content{
+	padding: 10px;
+	color:rgba(255,255,255,0.8);
+	font-size: 14px;
+}
+.item-list{
+	padding:10px;
+	margin-bottom:10px;
+}
+.describe-text{
+	margin-bottom:10px;
+}
+.item-pic{
+	margin-right: 10px;
+}
+.item-pic img{
+	width: 100%;
+	height: 100%;
+}
+.layui-rate li i.layui-icon{
+	font-size:16px;
+}
+.tip>div:nth-child(2){
+	margin-bottom:8px
+	}
+.tip div:nth-child(1)>span{
+	background-color:#8cf92d;
+	padding:0px 4px;
+	margin-left:10px;
+	margin-right: 10px;
+}
+.describe-text>div{
+	flex: 1;
+	margin:0 5px;
+	background-color:rgba(20,60,109,1);
+}
+.describe-text>div>p{
+	text-align: center;
+}
+.describe-text>div>p:nth-child(1){
+	padding:10px 0px;
+	/* border-bottom: 1px solid #051048; */
+	color: rgb(153,153,153);
+	font-size: 12px;
+}
+.describe-text>div>p:nth-child(2){
+	color:#fff;
+	font-size: 16pt;
+	padding: 10px 0 10px 0;
+	background-color:rgba(20,60,109,1)
+}
+.describe-text>div:last-child>p:last-child{
+	color:#fcfe1e
+}
+.item-chart>div{
+	flex:1;
+	height: 260px;
+	margin:0 3px;
+}

@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>金泰物业运营指挥中心</title>
+		<link rel="stylesheet" href="plugin/layui/css/layui.css">
+		<link rel="stylesheet" href="css/scroll.css">
+		<link rel="stylesheet" href="css/wyView.css">
+		<script src="plugin/layui/layui.all.js"></script>
+	</head>
+	<body>
+		<div class="wrap-outer">
+			<div class="wrap-inner">
+				<div class="inner-header">
+					<div class="zimu-wrap">
+						<span style="color:#f7f43f;margin-right:20px;vertical-align: top;">最新舆情：5件</span>
+						<div style="display: inline-block;overflow: hidden;margin-top:-4px;width:250px">
+							<div class="list_lh" style="display: inline-block;">
+								<ul style="">
+									<li>
+										<p><span>信息：来之金泰小区的一篇</span><span>物业信息网</span></p>
+									</li>
+									<li>
+										<p><span>信息：来之金泰先锋小区的一篇</span><span>物业信息网</span></p>
+									</li>
+									<li>
+										<p><span>信息：来之金泰小区的一篇</span><span>物业信息网</span></p>
+									</li>
+									<li>
+										<p><span>信息：来之金泰小区的一篇</span><span>物业信息网</span></p>
+									</li>
+									<li>
+										<p><span>信息：来之金泰小区的一篇</span><span>物业信息网</span></p>
+								</ul>
+							</div>
+						</div>
+						
+					</div>
+					<div class="time-wrap" style="width:200px">
+						<span id="time"></span>
+					</div>
+					<h2 class="wy_head_tit">金泰物业运营管理系统</h2>
+				</div>
+				<div class="inner-container" >
+					<div class="layui-row wy-row layui-col-space10">
+						 <div class="wy-col-md4 layui-col-md4 layui-col-sm4 left" style="height: calc(100% + 10px);">
+							<div class="layui-row wy-row layui-col-space10">
+								<div class="wy-block layui-col-md7 layui-col-sm7">
+								 	<div class="kuang_bg" style="height:100%;" >
+										<div class="wy-title" ><span>设备管理施</span></div>
+										<div class="layui-row wy-row" style="height: 220px;">
+											<div class=" wy-col-md4 layui-col-md4 layui-col-sm4 " >
+												
+												<div class="" id="deviceManage1" style="height:100%;" >
+													
+												</div>
+												
+											</div>
+											<div class=" wy-col-md4 layui-col-md4 layui-col-sm4 " style="height:100%;">
+												<div class="" id="deviceManage2" style="height:100%;" >
+													
+												</div>
+											</div>
+											<div class=" wy-col-md4 layui-col-md4 layui-col-sm4 " style="height:100%;">
+												<div class="" id="deviceManage3" style="height:100%;" >
+													
+												</div>
+											</div>
+										</div>
+										
+										<div style="height:calc(100% - 260px);">
+											<div class="layui-row wy-row" style="border-top:2px solid rgba(23,40,90,0.8)">
+												<div class="wy-block wy-col-md6 layui-col-md6 layui-col-sm6 flex-center" style="height:100%;">
+													<div class="text-block">
+														<h3>在管设备数</h3>
+														<p>78000 </p>
+													</div>
+												</div>
+												<div class="wy-block wy-col-md6 layui-col-md6 layui-col-sm6 flex-center"  style="height:100%;border-left:2px solid rgba(23,40,90,0.8)">
+													<div class="text-block">
+														<h3>再管设备数</h3>
+														<p>23000</p>
+													</div>
+												</div>
+											</div>
+										</div>
+								 	</div>
+								</div>
+								<div class="wy-block layui-col-md5 layui-col-sm5">
+									 <div class="kuang_bg" style="height:100%">
+										<div class="wy-title"><span>本月维修维保</span></div>
+										<div class="chart-wrap" id="repair"> 
+											
+										</div>
+									 </div>
+								</div> 
+								<div class="wy-block layui-col-md5 layui-col-sm5">
+									<div class="kuang_bg"  style="height:100%">
+										<div class="wy-title"><span>本月能耗情况</span></div>
+										<div class="" id="energy" style="height: 180px;"> </div>
+										<div style="height:calc(100% - 220px);">
+											<div class="layui-row wy-row">
+												<div class="wy-block wy-col-md6 layui-col-md6 layui-col-sm6 flex-center" style="height:100%;">
+													<div class="text-block">
+														<h3>上月工作日</h3>
+														<p>280万<span style="margin-left:6px;color:rgba(255,255,255,0.6)">kw/h</span></p>
+													</div>
+												</div>
+												<div class="wy-block wy-col-md6 layui-col-md6 layui-col-sm6 flex-center" style="height:100%;">
+													<div class="text-block">
+														<h3>上月非工作日</h3>
+														<p>120万<span style="margin-left:6px;color:rgba(255,255,255,0.6)">kw/h</span></p>
+													</div>
+												</div>
+											</div>
+											
+										</div>
+									</div>
+								</div>
+								<div class="wy-block layui-col-md7 layui-col-sm5">
+									<div class="kuang_bg" style="height:100%">
+										<div class="wy-title"><span>年度能耗情况</span></div>
+										<div class="chart-wrap" id="yearEnergy">
+											
+										</div>
+										<div class="energy-select">
+											<select name="" id="" class="high-shadow" style="width:80px;height:30px">
+												<option value ="0">年份</option>
+												<option value ="1">2018</option>
+												<option value ="1">2017</option>
+											</select>
+											<span>单位 kw/h</span>
+										</div>
+									</div>
+								</div>
+							</div>
+						 </div>
+						 <div class="wy-col-md4 layui-col-md4 layui-col-sm4" >
+							 <!-- 地图 -->
+							 <div class="layui-row wy-row ">
+								 <div class="kuang_bg" style="height:100%">
+									 <div class="map-title">
+										<div class="map-tab "><span class="active">北京市</span><span>全国</span></div>
+										<div class="flex-center"><span>项目数:26</span><span>服务面积:98.08万㎡</span><span>总户数：658888户</span></div>
+									 </div>
+									 <div class="chart-wrap" id="bjMap" style="height: 100%;"></div>
+								 </div>
+							</div>
+						 </div>
+						 <div class="wy-col-md4 layui-col-md4 layui-col-sm4 right" style="height: calc(100% + 20px);">
+							<div class="layui-row wy-row layui-col-space10">
+								<div class="wy-col-md6 layui-col-md6 right1">
+									<div class="layui-row wy-row layui-col-space10">
+										<div class="wy-block layui-col-md12">
+											<div  style=";height:100%">
+												<div class="kuang_bg" style=";height:100%">
+													<div class="wy-title"><span>本月工单</span></div>
+													<div class="chart-wrap" id="workOrder" style="height: 100%;"> 
+														
+													</div>
+												</div>
+											</div>
+										</div> 
+										<div class="wy-block layui-col-md12">
+											<div class="kuang_bg" style=";height:100%">
+												<div class="wy-title"><span>工单实时情况</span></div>
+												<div class="chart-wrap" style="overflow: hidden;">
+													<!-- 代码开始 -->
+													<div class="list_lh_header"><p style="border-bottom:2px solid rgba(23,40,90,0.8)"><span>报修位置</span><span>报事事项</span><span>状态</span></p></div>
+													<div class="list_lh">
+														<ul>
+															<li>
+																<p><span>金泰大厦2208</span><span>灯不亮</span><span>未开始</span></p>
+															</li>
+															<li>
+																<p><span>富地大厦909</span><span> 门关不严</span><span>进行中</span></p>
+															</li>
+															<li>
+																<p><span>金泰先锋小区3号楼2单元</span><span>门禁打不开</span><span>进行中</span></p>
+															</li>
+															<li>
+																<p><span>丽湾小区2号楼1单元1803</span><span>窗户坏了</span><span>未开始</span></p>
+															</li>
+															<li>
+																<p><span>天津丽湾小区1期2号楼1单元</span><span>可视对讲没显示</span><span>已完成</span></p>
+															</li>
+															<li>
+																<p><span>中国移动北京基地</span><span>停车场道闸轮子坏了</span><span>已完成</span></p>
+															</li>
+															<li>
+																<p><span>CBD国际大厦  203</span><span>停车场道闸不落杆</span><span>未开始</span></p>
+															</li>
+															<li>
+																<p><span>公测豪华礼包公测豪华礼包</span><span>公测豪华礼包公测豪华礼包</span><span>已完成</span></p>
+															</li>
+															<li>
+																<p><span>金泰大厦2208</span><span>灯不亮</span><span>未开始</span></p>
+															</li>
+															<li>
+																<p><span>富地大厦909</span><span> 门关不严</span><span>进行中</span></p>
+															</li>
+															<li>
+																<p><span>金泰先锋小区3号楼2单元</span><span>门禁打不开</span><span>进行中</span></p>
+															</li>
+															<li>
+																<p><span>丽湾小区2号楼1单元1803</span><span>窗户坏了</span><span>未开始</span></p>
+															</li>
+															<li>
+																<p><span>天津丽湾小区1期2号楼1单元</span><span>可视对讲没显示</span><span>已完成</span></p>
+															</li>
+															<li>
+																<p><span>中国移动北京基地</span><span>停车场道闸轮子坏了</span><span>已完成</span></p>
+															</li>
+															<li>
+																<p><span>CBD国际大厦  203</span><span>停车场道闸不落杆</span><span>未开始</span></p>
+															</li>
+															<li>
+																<p><span>公测豪华礼包公测豪华礼包</span><span>公测豪华礼包公测豪华礼包</span><span>已完成</span></p>
+															</li>
+															<li>
+																<p><span>金泰大厦2208</span><span>灯不亮</span><span>未开始</span></p>
+															</li>
+															<li>
+																<p><span>富地大厦909</span><span> 门关不严</span><span>进行中</span></p>
+															</li>
+															<li>
+																<p><span>金泰先锋小区3号楼2单元</span><span>门禁打不开</span><span>进行中</span></p>
+															</li>
+															<li>
+																<p><span>丽湾小区2号楼1单元1803</span><span>窗户坏了</span><span>未开始</span></p>
+															</li>
+															<li>
+																<p><span>天津丽湾小区1期2号楼1单元</span><span>可视对讲没显示</span><span>已完成</span></p>
+															</li>
+															<li>
+																<p><span>中国移动北京基地</span><span>停车场道闸轮子坏了</span><span>已完成</span></p>
+															</li>
+															<li>
+																<p><span>CBD国际大厦  203</span><span>停车场道闸不落杆</span><span>未开始</span></p>
+															</li>
+															<li>
+																<p><span>公测豪华礼包公测豪华礼包</span><span>公测豪华礼包公测豪华礼包</span><span>已完成</span></p>
+															</li>
+														</ul>
+													</div>
+													<!-- 代码结束 -->
+												</div>
+											</div>
+										</div> 
+									</div>
+								</div>
+								<div class="wy-col-md6 layui-col-md6 right2">
+									<div class="layui-row wy-row layui-col-space10">
+										<div class="wy-block layui-col-md12">
+											<div class="kuang_bg" style=";height:100%">
+												<div class="wy-title"><span>收缴率排名</span></div>
+												<div class="chart-wrap" id="collectionRate" style="height:calc (100% - 40px);"> 
+													
+												</div>
+											</div>
+										</div>
+										<div class="wy-block layui-col-md12">
+											<div class="kuang_bg" style="height:100%">
+												<div class="wy-title"><span>收入分布</span></div>
+												<div class="chart-wrap" id="income" style="height: 100%;"> 
+													
+												</div>
+												<!-- <div class=" wy-col-md6 layui-col-md6 layui-col-sm6 " style="height:100%;">
+													
+													<div class="chart-wrap" id="income" style="height: 100%;"> 
+														
+													</div>
+													
+												</div>
+												<div class=" wy-col-md6 layui-col-md6 layui-col-sm6 " style="height:100%;">
+													<div class="chart-wrap" id="income2" style="height: 100%;"> 
+														
+													</div>
+												</div> -->
+											</div>
+										</div>
+										<div class="wy-block layui-col-md12">
+											<div class="kuang_bg" style="background: rgba(10,15,34,.8);height:100%">
+												<div class="wy-title"><span>品质指标</span></div>
+												<div class="chart-wrap wy-block layui-col-md7">
+													<div class="layui-row wy-row">
+														<div class="wy-block layui-col-md12">
+															<div class='flex-between small-title'><span>投诉率(万户)</span><span><i style="color:#32d953;font-size:14px;font-weight:800">↓</i>0.6</span></div>
+															<div id="qualityRatio0" style="height:-webkit-calc(100% - 20px) "></div>
+														</div>
+														<div class="wy-block layui-col-md12">
+															<div class='flex-between small-title'><span>巡检完成率</span><span><i style="color:#32d953;font-size:14px;font-weight:800">↓</i>0.1</span></div>
+															<div id="qualityRatio1" style="height:-webkit-calc(100% - 20px)"></div>
+														</div>
+														<div class="wy-block layui-col-md12">
+															<div class='flex-between small-title'><span>督导完成合格率</span><span><i style="color:red;font-size:14px;font-weight:800">↑</i>0.7</span></div>
+															<div id="qualityRatio2" style="height:-webkit-calc(100% - 20px)"></div>
+														</div>
+													</div>
+												</div>
+												<div class="chart-wrap wy-block layui-col-md5" style="">
+													<!-- 项目数 -->
+													<div id="projectNum" style="height: 100%;"></div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						 </div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+	<script src="js/jquery-2.1.1.min.js"></script>
+	<script src="js/echarts.min.js"></script>
+	<script src="js/scroll.js"></script>
+	<script src="js/index.js"></script><!-- 设备管理 -->
+	<script src="js/index2.js"></script><!-- 维修 -->
+	<script src="js/index3-1.js"></script><!-- 地图 -->
+	<script src='js/index4.js'></script><!-- 本月工单 -->
+	<script src='js/index5.js'></script><!-- 收缴率排名 -->
+	<script src='js/index6.js'></script><!-- 收入分布 -->
+	<script src='js/index7.js'></script><!-- 项目数量圆形 -->
+	<script src='js/index8.js'></script><!-- 本月能耗 -->
+	<script src='js/index9.js'></script><!-- 年度能耗 -->
+	<script src='js/index10.js'></script><!-- 项目数量柱形比率 -->
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$('.list_lh li:even').addClass('lieven');			
+			$("div.list_lh").myScroll({
+				speed:40, //数值越大，速度越慢
+				rowHeight:68 //li的高度
+			});
+			
+			setInterval(function(){
+				 var time=new Date();
+				 var year=time.getFullYear(); //获取年份
+				 var month=time.getMonth()+1; //获取月份
+				 var day=time.getDate();  //获取日期
+				 var hour=checkTime(time.getHours());  //获取时
+				 var minite=checkTime(time.getMinutes()); //获取分
+				 var second=checkTime(time.getSeconds()); //获取秒
+				 /****当时、分、秒、小于10时，则添加0****/
+				 function checkTime(i){
+					 if(i<10) return "0"+i;
+					 return i;
+				 }
+				 var box=document.getElementById("time");
+				 box.innerHTML=year+"年"+month+"月"+day+"日 "+hour+":"+minite+":"+second;       
+				},1000);   //setInterval(fn,i) 定时器，每隔i秒执行fn
+			})	
+	</script>
+</html>
