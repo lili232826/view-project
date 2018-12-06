@@ -1,6 +1,4 @@
-window.onresize = function(){
-	bjMap.resize();
-	}
+
 var beijing = "data/beijing.json";
 var zhongguo = "data/china.json";
 var hebei = "data/map/data-hebei.json";
@@ -37,9 +35,11 @@ var fujian = "/asset/get/s/data-1528969599839-S1OFFn1ZQ.json";
 var xianggang = "/asset/get/s/data-1528969589857-S1ROthJWm.json";
 var type=0;
 var fleg=true;//首次北京点击的初始化一次
-var myChart=echarts.extendsMap = function(id, opt){
+var bjMap=null;
+var Map=echarts.extendsMap = function(id, opt){
     // 实例
-    var chart = this.init(document.getElementById(id));
+    chart = this.init(document.getElementById(id));
+		bjMap=chart;
     var curGeoJson = {};
     var cityMap = {
     		'中国': zhongguo,
@@ -634,12 +634,12 @@ $(".map-tab>span").click(function(){
 	index=$(this).index();
 	type=index;
 	console.log(index,'index');
-	var myChart=null;
+	var bjMap=null;
 	if(index==1){
 		//fleg=false;
 		$.getJSON(zhongguo, function(geoJson){
 		    echarts.registerMap('中国', geoJson);
-		    myChart = echarts.extendsMap('bjMap', {
+		    bjMap = echarts.extendsMap('bjMap', {
 		    	bgColor: '#154e90', // 画布背景色
 		    	mapName: '中国',    // 地图名
 		    	goDown: true,       // 是否下钻
@@ -743,7 +743,6 @@ function showItem(dataIndex){
 			shade:true,
 			shade: [0.8, '#0f0f10'],
 			area: ['720px', '540px'],
-			skin: 'view-class',
 			content: ['page/item_details.html','no'] //这里content是一个URL，如果你不想让iframe出现滚动条，你还可以content: ['http://sentsin.com', 'no']
 		});
 	});       
@@ -753,7 +752,7 @@ function setBeijing(){
 	echarts.init(document.getElementById('bjMap')).dispose();//销毁前一个实例
 	$.getJSON(beijing, function(geoJson){
 	    echarts.registerMap('北京', geoJson);
-	    var myChart = echarts.extendsMap('bjMap', {
+	    var bjMap = echarts.extendsMap('bjMap', {
 	    	bgColor: '#154e90', // 画布背景色
 	    	mapName: '北京',    // 地图名
 	    	goDown: true,       // 是否下钻
@@ -833,8 +832,8 @@ function setBeijing(){
 				
 	    });
 			// 添加事件
-			//console.log(myChart,'oooooo')
-			myChart.on('click', function(params) {
+			//console.log(bjMap,'oooooo')
+			bjMap.on('click', function(params) {
 					var _self = this;
 					//点击项目展示详情页
 					if(params.componentType=='series'&&type==0&&fleg){

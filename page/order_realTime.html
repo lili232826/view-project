@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>各项目工单实时情况</title>
+		<link rel="stylesheet" href="css/index.css" />
+		<link rel="stylesheet" href="../plugin/layui/css/layui.css"/>
+		<style>
+			.content{
+				padding: 5px;
+			}
+			section{
+				color: rgb(51, 255, 255);
+				text-align: center;
+				line-height: 50px;
+			}
+			.layui-table,.layui-table thead tr,.layui-table-header{
+				background: transparent;
+				color:#e6e6e6;
+				border-color:rgb(51, 255, 255);
+			}
+			.layui-table td, .layui-table th, .layui-table-col-set, .layui-table-fixed-r, .layui-table-grid-down, .layui-table-header, .layui-table-page, .layui-table-tips-main, .layui-table-tool, .layui-table-total, .layui-table-view, .layui-table[lay-skin=line], .layui-table[lay-skin=row]{
+				border-color:rgb(51, 255, 255);
+			}
+			.layui-table tbody tr:hover,.layui-table-hover{
+				background-color: #01AAED;
+			}
+		</style>
+	</head>
+	<body>
+		
+		<div style="width: 98%;margin: 0 auto;">
+			<section><h2>各项目工单实时情况</h2></section>
+			<header>
+				<div class="content"><h3>处理中：</h3><h3>3个</h3></div>
+				<div class="content"><h3>未开始：</h3><h3>2个</h3></div>
+				<div class="content"><h3>已完成：</h3><h3>10个</h3></div>
+			</header>
+			<table id="workOrder" ></table>
+		</div>
+		
+		<script src="../js/jquery-2.1.1.min.js"></script>
+		<script src="../plugin/layui/layui.js"></script>
+		<script>
+			var h = document.body.offsetHeight;
+			console.log(h);
+			layui.use('table',function(){
+				var table = layui.table;
+				table.render({
+					elem:"#workOrder",
+					height:h-140,
+					page:true,
+					cols:[[
+						{field:'position',title:'保修位置'},
+						{field:'matter',title:'保修事项',align:'center'},
+						{field:'status',title:'完成情况',align:'center'},
+						{field:'time',title:'处理时间',align:'center'}
+					]],
+					data:[{
+						position:'金泰大厦2208',
+						matter:'灯不亮',
+						status:'未开始',
+						time:'17:30'
+					},{
+						position:'金泰先锋小区',
+						matter:'门禁无法开门',
+						status:'已完成',
+						time:'17:10'
+					},{
+						position:'金泰丽湾小区5#2单元703',
+						matter:'可视对讲不好使',
+						status:'处理中',
+						time:'17:00'
+					},{
+						position:'金泰大厦2208',
+						matter:'灯不亮',
+						status:'未开始',
+						time:'16:40'
+					},{
+						position:'金泰先锋小区',
+						matter:'门禁无法开门',
+						status:'已完成',
+						time:'16:25'
+					},{
+						position:'金泰丽湾小区5#2单元703',
+						matter:'可视对讲不好使',
+						status:'处理中',
+						time:'16:00'
+					},{
+						position:'金泰大厦2208',
+						matter:'灯不亮',
+						status:'未开始',
+						time:'15:50'
+					},{
+						position:'金泰先锋小区',
+						matter:'门禁无法开门',
+						status:'已完成',
+						time:'15:45'
+					},{
+						position:'金泰丽湾小区5#2单元703',
+						matter:'可视对讲不好使',
+						status:'处理中',
+						time:'14:30'
+					},{
+						position:'金泰大厦2208',
+						matter:'灯不亮',
+						status:'未开始',
+						time:'13:50'
+					},{
+						position:'金泰先锋小区',
+						matter:'门禁无法开门',
+						status:'已完成',
+						time:'13:00'
+					},{
+						position:'金泰丽湾小区5#2单元703',
+						matter:'可视对讲不好使',
+						status:'处理中',
+						time:'12:30'
+					}]
+				})
+			})
+		</script>
+	</body>
+</html>

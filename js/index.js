@@ -1,3 +1,4 @@
+
 //设备管理
 var deviceManage1 = echarts.init(document.getElementById('deviceManage1'));
 var deviceManage2 = echarts.init(document.getElementById('deviceManage2'));

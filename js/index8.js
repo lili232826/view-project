@@ -1,7 +1,4 @@
 
-	window.onresize = function(){
-	energy.resize();
-	}
 var energy = echarts.init(document.getElementById('energy'));
 var dataStyle = {
     normal: {

@@ -1,7 +1,4 @@
 
-	window.onresize = function(){
-	projectNum.resize();
-	}
 var projectNum = echarts.init(document.getElementById('projectNum'));
 var option = {
     //backgroundColor:'#081C90',

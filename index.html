@@ -51,12 +51,10 @@
 								 	<div class="kuang_bg" style="height:100%;" >
 										<div class="wy-title" ><span>设备管理施</span></div>
 										<div class="layui-row wy-row" style="height: 220px;">
-											<div class=" wy-col-md4 layui-col-md4 layui-col-sm4 " >
-												
+											<div class=" wy-col-md4 layui-col-md4 layui-col-sm4 " >										
 												<div class="" id="deviceManage1" style="height:100%;" >
 													
 												</div>
-												
 											</div>
 											<div class=" wy-col-md4 layui-col-md4 layui-col-sm4 " style="height:100%;">
 												<div class="" id="deviceManage2" style="height:100%;" >
@@ -79,9 +77,9 @@
 													</div>
 												</div>
 												<div class="wy-block wy-col-md6 layui-col-md6 layui-col-sm6 flex-center"  style="height:100%;border-left:2px solid rgba(23,40,90,0.8)">
-													<div class="text-block">
-														<h3>再管设备数</h3>
-														<p>23000</p>
+													<div class="text-block" id="contracting">
+														<h3>工程在执行合同</h3>
+														<p>6个</p>
 													</div>
 												</div>
 											</div>
@@ -126,7 +124,7 @@
 											
 										</div>
 										<div class="energy-select">
-											<select name="" id="" class="high-shadow" style="width:80px;height:30px">
+											<select name="" id="energy-select" class="high-shadow" style="width:80px;height:30px">
 												<option value ="0">年份</option>
 												<option value ="1">2018</option>
 												<option value ="1">2017</option>
@@ -166,7 +164,7 @@
 										<div class="wy-block layui-col-md12">
 											<div class="kuang_bg" style=";height:100%">
 												<div class="wy-title"><span>工单实时情况</span></div>
-												<div class="chart-wrap" style="overflow: hidden;">
+												<div class="chart-wrap" style="overflow: hidden;" id="orderRealTime">
 													<!-- 代码开始 -->
 													<div class="list_lh_header"><p style="border-bottom:2px solid rgba(23,40,90,0.8)"><span>报修位置</span><span>报事事项</span><span>状态</span></p></div>
 													<div class="list_lh">
@@ -354,7 +352,97 @@
 				 //setInterval(fn,i) 定时器，每隔i秒执行fn
 				 //var box=document.getElementById("time");
 				 //box.innerHTML=year+"年"+month+"月"+day+"日 "+hour+":"+minite+":"+second;       
-				},1000);   
-			})	 
+				},1000);
+			//02
+			<!-- 收缴率排名 -->
+			$("#collectionRate").on('click',function(){
+				layer.open({
+					title:false,
+					type: 2, 
+					shade: [0.8, '#0f0f10'],
+					content: ['page/collection_rate.html',"no"] ,
+					area: ['720px', '500px']
+				});
+			})
+			//03收入分布
+			$("#income").on('click',function(){
+				layer.open({
+					title:false,
+					type: 2, 
+					shade: [0.8, '#0f0f10'],
+					content: ['page/income_distribution.html','no'] ,
+					area: ['900px', '600px']
+				});
+			})
+			//04各项目工单
+			$("#workOrder").on('click',function(){
+				layer.open({
+					title:false,
+					type: 2, 
+					shade: [0.8, '#0f0f10'],
+					content: ['page/project_orders.html','no'] ,
+					area: ['1200px', '700px']
+				});
+			})
+			//05工单实时情况
+			$("#orderRealTime").on('click',function(){
+				layer.open({
+					title:false,
+					type: 2, 
+					shade: [0.8, '#0f0f10'],
+					content: ['page/order_realTime.html','no'] ,
+					area: ['800px', '615px']
+				});
+			})
+			//06年度能耗
+			$("#yearEnergy").on('click',function(){
+			layer.open({
+				title:false,
+				type: 2, 
+				shade: [0.8, '#0f0f10'],
+				content: ['page/year_enery.html','no'] ,
+				area: ['1000px', '600px']
+			});
+			})
+			//08本月维保
+			$("#repair").on('click',function(){
+				layer.open({
+				title:false,
+				type: 2, 
+				shade: [0.8, '#0f0f10'],
+				content: ['page/project_repair.html','no'] ,
+				area: ['1000px', '600px']
+				});
+			})
+			
+			//09本月能耗
+			$("#energy").on('click',function(){
+				layer.open({
+					title:false,
+					type: 2, 
+					shade: [0.8, '#0f0f10'],
+					content: ['page/energy_consumption.html','no'] ,
+					area: ['800px', '600px']
+				});
+			})
+			//调整图表
+			window.onresize = function(){
+				deviceManage1.resize();//index
+				deviceManage2.resize();
+				deviceManage3.resize();
+				repair.resize();//index2
+				bjMap.resize();//index3
+				workOrder.resize();//index4
+				collectionRate.resize();//index5
+				income.resize();//index6
+				projectNum.resize();//index7
+				energy.resize();//index8
+				yearEnergy.resize();//index9
+				qualityRatio0.resize();//index10
+				qualityRatio1.resize();
+				qualityRatio2.resize();
+
+			}
+		})	 
 	</script>
 </html>

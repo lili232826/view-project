@@ -1,9 +1,4 @@
 
-	window.onresize = function(){
-	qualityRatio0.resize();
-	qualityRatio1.resize();
-	qualityRatio2.resize();
-	}
 var qualityRatio0 = echarts.init(document.getElementById('qualityRatio0'));
 var qualityRatio1 = echarts.init(document.getElementById('qualityRatio1'));
 var qualityRatio2 = echarts.init(document.getElementById('qualityRatio2'));

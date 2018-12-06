@@ -1,7 +1,4 @@
 
-	window.onresize = function(){
-	workOrder.resize();
-	}
 var workOrder = echarts.init(document.getElementById('workOrder'));
 var option = {
     //backgroundColor:'#081C90',

@@ -45,6 +45,12 @@
 	-o-border-image: url(../img/bianjiao.png) 6 6 6 6 stretch;
 	/* background: url(../img/kuang_bg.png) center no-repeat; */
 	/* background-size: cover; */
+	/* cursor: pointer; */
+}
+#repair canvas,#workOrder canvas,
+#collectionRate canvas,#income canvas,
+#yearEnergy canvas,#contracting,#orderRealTime{
+	cursor: pointer;
 }
 .chart-wrap{
 	height: calc( 100% - 40px) !important;
@@ -130,7 +136,7 @@
 	margin-top:-3px;
 	/* line-height: 40px; */
 	text-align: center;
-	background: url(../img/tixing_bg4.png)  no-repeat;
+	/* background: url(../img/tixing_bg4.png)  no-repeat; */
 	/* //background-size: auto auto; */
   background-position: center 0;
 	}
@@ -140,9 +146,15 @@
 	line-height: 40px;
 	padding: 0 18px;
 	font-size: 16px;
-	cursor: pointer;
-	/* background: url(../img/tixing_bg.png) center no-repeat;
-	background-size: 100% 100%; */
+/* 	cursor: pointer; */
+	
+
+}
+.wy-title>span{
+	min-width: 170px;
+	background: url(../img/tixing_bg4.png) center no-repeat;
+	background-size: 100% 100%;
+
 }
 .small-title{
 	color: #fff;

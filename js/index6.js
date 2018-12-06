@@ -1,7 +1,4 @@
 
-	window.onresize = function(){
-	income.resize();
-	}
 var income = echarts.init(document.getElementById('income'));
 var option = {
     //backgroundColor:'#081C90',

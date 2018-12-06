@@ -26,8 +26,8 @@ html,body{
 	margin-right: 10px;
 }
 .item-pic img{
-	width: 100%;
-	height: 100%;
+	width: 120px;
+	height: 90px;
 }
 .layui-rate li i.layui-icon{
 	font-size:16px;
@@ -40,6 +40,9 @@ html,body{
 	padding:0px 4px;
 	margin-left:10px;
 	margin-right: 10px;
+}
+.describe-text{
+	margin-top:6px;
 }
 .describe-text>div{
 	flex: 1;
@@ -59,13 +62,28 @@ html,body{
 	color:#fff;
 	font-size: 16pt;
 	padding: 10px 0 10px 0;
-	background-color:rgba(20,60,109,1)
+	/* background-color:rgba(20,60,109,1) */
 }
-.describe-text>div:last-child>p:last-child{
+.describe-text>div:last-child>p.repair{
 	color:#fcfe1e
 }
 .item-chart>div{
 	flex:1;
 	height: 260px;
 	margin:0 3px;
+}
+.layer-content .describe-text>div>p:nth-child(2){
+	font-size: 18px;
+}
+.layer-content .describe-text>div{
+	max-width: 200px;
+	height: 80px;
+	cursor: pointer;
+}
+.layer-content .describe-text>div.active{
+	/* background-image:url(../img/tab_bg3.png) ;
+	background-size: 100% 100%;
+	border-radius: 6px;
+	background-repeat: repeat-y; */
+	background-color:rgba(2,55,177)
 }

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>各项目工单</title>
+		<link rel="stylesheet" href="../plugin/layui/css/layui.css">
+		<link rel="stylesheet" href="../css/reset.css">
+		<link rel="stylesheet" href="../css/wyView.css">
+		<link rel="stylesheet" href="../css/wy_layer.css">
+		<style>
+			.content{
+				padding: 5px;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="wrap-outer">
+			<div class="content layer-content" style="height: 100%;">
+				<div class="describe-text flex-center">
+					<div class="content-list all">
+						<p>本月工单：</p>
+						<p>68个</p>
+					</div>
+					<div class="content-list">
+						<p>上月工单：</p>
+						<p>58个</p>
+					</div>
+				</div>
+				<div class="layui-row" style="height: calc(100% - 100px);">
+					<div id="projectOrderChart" style="height:100%" class="layui-col-lg6 layui-col-md6 layui-col-sm6"></div>
+					<div id="projectOrderCountChart"  style="height:100%" class="layui-col-lg6 layui-col-md6 layui-col-sm6"></div>
+				</div>
+			</div>
+		</div>
+		
+		
+		<script src="../js/jquery-2.1.1.min.js"></script>
+		<script src="../js/echarts.min.js"></script>
+		<script src="js/projectOrders.js"></script>
+	</body>
+</html>

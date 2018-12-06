@@ -1,7 +1,4 @@
 
-	window.onresize = function(){
-	repair.resize();
-	}
 	var repair = echarts.init(document.getElementById('repair'));
 //var colorList =['#228c38', '#1a57b2', '#b04b07', '#af8108'];
 var colorList =["#f6d54a","#f69846","#44aff0","#45dbf7","#f845f1","#ad46f3","#5045f6","#4777f5"];
